@@ -172,4 +172,12 @@ M.create_pane = function(...)
   require('windex.movement').create_pane(...)
 end
 
+-- Window movement:
+M.next_tmux_window = function()
+  require('windex.movement').next_tmux_window()
+end
+M.prev_tmux_window = function()
+  require('windex.movement').prev_tmux_window()
+end
+
 return M

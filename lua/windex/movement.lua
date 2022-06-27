@@ -87,6 +87,24 @@ M.switch = function(direction)
   end
 end
 
+-- Switch to the previous tmux window
+M.previous_tmux_window = function()
+  if not tmux.requirement_passed() then
+    utils.error_msg('Tmux 1.8+ is required')
+    return
+  end
+  tmux.execute('previous-window')
+end
+
+
+M.next_tmux_window = function()
+  if not tmux.requirement_passed() then
+    utils.error_msg('Tmux 1.8+ is required')
+    return
+  end
+  tmux.execute('next-window')
+end
+
 -- Switch to previous nvim window or tmux pane.
 M.previous = function()
   -- Check if user has tmux installed.
