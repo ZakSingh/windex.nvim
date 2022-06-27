@@ -88,7 +88,7 @@ M.switch = function(direction)
 end
 
 -- Switch to the previous tmux window
-M.previous_tmux_window = function()
+M.prev_tmux_window = function()
   if not tmux.requirement_passed() then
     utils.error_msg('Tmux 1.8+ is required')
     return
